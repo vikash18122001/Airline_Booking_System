@@ -1,0 +1,17 @@
+{
+  "name": "flightandsearch",
+  "version": "1.0.0",
+  "description": "this is airline booking (backend) system",
+  "main": "index.js",
+  "scripts": {
+    "Start":"npx nodemon src/index"
+  },
+  "author": "vikash",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.1"
+  }
+}
+   
