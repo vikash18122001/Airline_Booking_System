@@ -23,6 +23,33 @@ class cityRepository{
             throw {error};
         }
     }
+    async updateCity(cityId,data)
+    {
+        try {
+            const City=await city.update(data,{
+                where :{
+                    id:cityId
+                }
+            });
+            return City;
+            
+        } catch (error) {
+            console.log("something went wrong in city-repository");
+            throw {error};
+        }
+    }
+
+    async getCity(cityId)
+    {
+        try {
+            const City=await city.findByPk(cityId);
+            return City;
+            
+        } catch (error) {
+            console.log("something went wrong in city-repository");
+            throw {error};
+        }
+    }
 }
 
 module.exports=cityRepository; 
