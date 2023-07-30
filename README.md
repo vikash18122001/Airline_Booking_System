@@ -36,5 +36,5 @@ terminal and executes command `npx sequelize db:create`.
 
 ### City -> id,name ,createdAt,updatedAt
 ### Airpot -> id,name,address,City_id,createdAt,updatedAt
-    RelationShip
+    RelationShip -> City has many airport and airport belongs to a city(one to many)
  
