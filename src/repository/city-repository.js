@@ -3,7 +3,7 @@ const {city}=require('../models/index');
 class cityRepository{
     async createCity({name}){
         try{
-            const City= await city.create({name});
+            const City= await city.create({ name });
             return City;
         }
         catch(error){
@@ -18,6 +18,7 @@ class cityRepository{
                     id:cityId
                 }
             })
+            return true;
         }
         catch(error){
             throw {error};
@@ -42,7 +43,7 @@ class cityRepository{
     async getCity(cityId)
     {
         try {
-            const City=await city.findByPk(cityId);
+            const  City = await city.findByPk(cityId);
             return City;
             
         } catch (error) {
