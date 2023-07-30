@@ -19,7 +19,7 @@ variable
 }
 
 ``` 
--Once you have added you db config as listed above ,go to the `src` folder from
+- Once you have added you db config as listed above ,go to the `src` folder from
 terminal and executes command `npx sequelize db:create`.  
 
 ## db design
@@ -31,4 +31,10 @@ terminal and executes command `npx sequelize db:create`.
  - A flight belongs to an airplane but an airplane has many flights.
  - A city has many airport but an airport belongs to a city.
  - One airport can have many flights but a flight belongs to one airport.
+
+## Table design
+
+### City -> id,name ,createdAt,updatedAt
+### Airpot -> id,name,address,City_id,createdAt,updatedAt
+    RelationShip
  
