@@ -27,11 +27,9 @@ class cityRepository{
     async updateCity(cityId,data)
     {
         try {
-            const City=await city.update(data,{
-                where :{
-                    id:cityId
-                }
-            });
+            const City=await city.findByPk(cityId);
+            City.name=data.name;
+            await City.save();
             return City;
             
         } catch (error) {
