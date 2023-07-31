@@ -40,7 +40,7 @@ module.exports = {
         modelNumber: 'Airbus A330 ',
         createdAt:new Date(),
         updatedAt:new Date(),
-        capacity:210
+        capacity:210 
         
       }], {});
   },
