@@ -1,8 +1,10 @@
 const express=require('express');
 
+
 const {PORT}=require('./config/serverConfig');
 
 const apiRoutes=require('./routes/index');
+
 
 const bodyParser=require('body-parser');
 const db=require('./models/index')

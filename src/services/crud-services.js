@@ -1,5 +1,6 @@
 const { crudRepository}=require('../repository/index');
 
+
 class crudService{
     constructor(repository){
         this.repository=repository;
