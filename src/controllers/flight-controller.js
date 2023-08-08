@@ -45,7 +45,49 @@ const getAll=async (req,res)=>{
         })
     }
 }
+const getFlight=async (req,res)=>{
+    try {
+        const response=await FlightService.getFlight(req.params.id);
+        return res.status(200).json({
+            data: response,
+            success:true,
+            message:"flight fetched successfully"
+ 
+         })
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            data: {},
+            success:false,
+            message:"flight not fetched",
+            error: error
+
+        })
+    }
+}
+const update=async (req,res)=>{
+    try {
+        const response=await FlightService.updateFlight(req.params.id,req.body);
+        return res.status(200).json({
+            data: response,
+            success:true,
+            message:"flight updated successfully"
+ 
+         })
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            data: {},
+            success:false,
+            message:"flight not updated",
+            error: error
+
+        }) 
+    }
+}
 module.exports={
     create,
-    getAll
+    getAll,
+    getFlight,
+    update
 }
